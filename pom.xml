@@ -22,7 +22,7 @@
 
 		<!-- Spring -->
 		<spring.version>4.1.6.RELEASE</spring.version>
-		<!-- <spring.data.jpa.version>1.9.1.RELEASE</spring.data.jpa.version> -->
+		<spring.data.jpa.version>1.9.1.RELEASE</spring.data.jpa.version>
 
 		<!-- Hibernate / JPA -->
 		<hibernate.version>5.0.4.Final</hibernate.version>
@@ -115,6 +115,11 @@
 			<artifactId>spring-tx</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>${spring.data.jpa.version}</version>
+		</dependency>
 
 		<!-- Hibernate -->
 		<dependency>
@@ -138,6 +143,16 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>${mysql.connector.version}</version>
 			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>jta</artifactId>
+			<version>1.1</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+			<version>1.1.0.Final</version>
 		</dependency>
 
 		<!-- Test Artifacts -->
@@ -264,7 +279,8 @@
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
