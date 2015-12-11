@@ -9,12 +9,12 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Version;
 
 @MappedSuperclass
-public abstract class CommonEntity implements Serializable {
+public abstract class PersistentObject implements Serializable {
 
 	private static final long serialVersionUID = 1311327241870515045L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 
 	@Version
@@ -48,7 +48,7 @@ public abstract class CommonEntity implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		CommonEntity other = (CommonEntity) obj;
+		PersistentObject other = (PersistentObject) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;
