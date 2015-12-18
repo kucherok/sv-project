@@ -45,10 +45,6 @@ public class SportTeam implements Serializable {
 
 	@Lob
 	private byte[] logo;
-	// private String graund;
-	// private String owner;
-	// private SportPlayer captain;
-	// private Competitions competition;
 
 	@Override
 	public String toString() {
@@ -57,138 +53,121 @@ public class SportTeam implements Serializable {
 				+ ", manager=" + manager + ", logo=" + Arrays.toString(logo) + "]";
 	}
 
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((countryCode == null) ? 0 : countryCode.hashCode());
-		result = prime * result + ((foundingDate == null) ? 0 : foundingDate.hashCode());
-		result = prime * result + ((gender == null) ? 0 : gender.hashCode());
-		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + Arrays.hashCode(logo);
-		result = prime * result + ((manager == null) ? 0 : manager.hashCode());
-		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((shortName == null) ? 0 : shortName.hashCode());
-		result = prime * result + version;
-		return result;
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		SportTeam other = (SportTeam) obj;
-		if (countryCode == null) {
-			if (other.countryCode != null)
-				return false;
-		} else if (!countryCode.equals(other.countryCode))
-			return false;
-		if (foundingDate == null) {
-			if (other.foundingDate != null)
-				return false;
-		} else if (!foundingDate.equals(other.foundingDate))
-			return false;
-		if (gender != other.gender)
-			return false;
-		if (id == null) {
-			if (other.id != null)
-				return false;
-		} else if (!id.equals(other.id))
-			return false;
-		if (!Arrays.equals(logo, other.logo))
-			return false;
-		if (manager == null) {
-			if (other.manager != null)
-				return false;
-		} else if (!manager.equals(other.manager))
-			return false;
-		if (name == null) {
-			if (other.name != null)
-				return false;
-		} else if (!name.equals(other.name))
-			return false;
-		if (shortName == null) {
-			if (other.shortName != null)
-				return false;
-		} else if (!shortName.equals(other.shortName))
-			return false;
-		if (version != other.version)
-			return false;
-		return true;
-	}
-
+	/**
+	 * @return the id
+	 */
 	public Long getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
-
+	/**
+	 * @return the version
+	 */
 	public int getVersion() {
 		return version;
 	}
 
-	public void setVersion(int version) {
-		this.version = version;
-	}
-
+	/**
+	 * @return the name
+	 */
 	public String getName() {
 		return name;
 	}
 
+	/**
+	 * @param name
+	 *            the name to set
+	 */
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	/**
+	 * @return the shortName
+	 */
 	public String getShortName() {
 		return shortName;
 	}
 
+	/**
+	 * @param shortName
+	 *            the shortName to set
+	 */
 	public void setShortName(String shortName) {
 		this.shortName = shortName;
 	}
 
+	/**
+	 * @return the gender
+	 */
 	public Gender getGender() {
 		return gender;
 	}
 
+	/**
+	 * @param gender
+	 *            the gender to set
+	 */
 	public void setGender(Gender gender) {
 		this.gender = gender;
 	}
 
+	/**
+	 * @return the countryCode
+	 */
 	public String getCountryCode() {
 		return countryCode;
 	}
 
+	/**
+	 * @param countryCode
+	 *            the countryCode to set
+	 */
 	public void setCountryCode(String countryCode) {
 		this.countryCode = countryCode;
 	}
 
+	/**
+	 * @return the foundingDate
+	 */
 	public Date getFoundingDate() {
 		return foundingDate;
 	}
 
+	/**
+	 * @param foundingDate
+	 *            the foundingDate to set
+	 */
 	public void setFoundingDate(Date foundingDate) {
 		this.foundingDate = foundingDate;
 	}
 
+	/**
+	 * @return the manager
+	 */
 	public String getManager() {
 		return manager;
 	}
 
+	/**
+	 * @param manager
+	 *            the manager to set
+	 */
 	public void setManager(String manager) {
 		this.manager = manager;
 	}
 
+	/**
+	 * @return the logo
+	 */
 	public byte[] getLogo() {
 		return logo;
 	}
 
+	/**
+	 * @param logo
+	 *            the logo to set
+	 */
 	public void setLogo(byte[] logo) {
 		this.logo = logo;
 	}

@@ -19,11 +19,13 @@ public class OrderPersistenceTests {
 	@Test
 	@Transactional
 	public void testSaveOrderWithItems() throws Exception {
-//		Order order = new Order();
-//		order.getItems().add(new Item());
-//		entityManager.persist(order);
-//		entityManager.flush();
-//		assertNotNull(order.getId());
+		System.out.println(entityManager.getProperties());
+
+		// Order order = new Order();
+		// order.getItems().add(new Item());
+		// entityManager.persist(order);
+		// entityManager.flush();
+		// assertNotNull(order.getId());
 	}
 
 	@Test

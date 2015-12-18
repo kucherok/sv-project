@@ -23,6 +23,7 @@
 		<!-- Spring -->
 		<spring.version>4.1.6.RELEASE</spring.version>
 		<spring.data.jpa.version>1.9.1.RELEASE</spring.data.jpa.version>
+		<spring.security.version>4.0.3.RELEASE</spring.security.version>
 
 		<!-- Hibernate / JPA -->
 		<hibernate.version>5.0.4.Final</hibernate.version>
@@ -120,6 +121,16 @@
 			<artifactId>spring-data-jpa</artifactId>
 			<version>${spring.data.jpa.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-web</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-config</artifactId>
+			<version>${spring.security.version}</version>
+		</dependency>
 
 		<!-- Hibernate -->
 		<dependency>
@@ -153,6 +164,11 @@
 			<groupId>javax.validation</groupId>
 			<artifactId>validation-api</artifactId>
 			<version>1.1.0.Final</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.el</groupId>
+			<artifactId>javax.el-api</artifactId>
+			<version>3.0.0</version>
 		</dependency>
 
 		<!-- Test Artifacts -->

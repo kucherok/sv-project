@@ -24,12 +24,18 @@ public abstract class PersistentObject implements Serializable {
 		return this.id != null;
 	}
 
+	/**
+	 * @return the id
+	 */
 	public Long getId() {
-		return this.id;
+		return id;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	/**
+	 * @return the version
+	 */
+	public int getVersion() {
+		return version;
 	}
 
 	@Override

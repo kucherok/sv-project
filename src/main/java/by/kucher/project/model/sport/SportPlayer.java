@@ -1,9 +1,7 @@
 package by.kucher.project.model.sport;
 
-import java.util.Collection;
 import java.util.Date;
 
-import javax.persistence.ElementCollection;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -18,23 +16,36 @@ public class SportPlayer extends PersistentObject {
 
 	@NotNull
 	private String name;
+
 	private String lastname;
+
 	private String surname;
+
 	private String fullname;
+
 	private int age;
-	@ElementCollection(targetClass = String.class)
-	private Collection<String> nationality;
+
 	@Temporal(TemporalType.DATE)
 	private Date dateOfBirth;
+
 	private String placeOfBirth;
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString() {
 		return "SportPlayer [name=" + name + ", lastname=" + lastname + ", surname=" + surname + ", fullname="
-				+ fullname + ", age=" + age + ", nationality=" + nationality + ", dateOfBirth=" + dateOfBirth
-				+ ", placeOfBirth=" + placeOfBirth + "]";
+				+ fullname + ", age=" + age + ", dateOfBirth=" + dateOfBirth + ", placeOfBirth=" + placeOfBirth + "]";
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#hashCode()
+	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -44,12 +55,16 @@ public class SportPlayer extends PersistentObject {
 		result = prime * result + ((fullname == null) ? 0 : fullname.hashCode());
 		result = prime * result + ((lastname == null) ? 0 : lastname.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
-		result = prime * result + ((nationality == null) ? 0 : nationality.hashCode());
 		result = prime * result + ((placeOfBirth == null) ? 0 : placeOfBirth.hashCode());
 		result = prime * result + ((surname == null) ? 0 : surname.hashCode());
 		return result;
 	}
 
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see java.lang.Object#equals(java.lang.Object)
+	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -80,11 +95,6 @@ public class SportPlayer extends PersistentObject {
 			if (other.name != null)
 				return false;
 		} else if (!name.equals(other.name))
-			return false;
-		if (nationality == null) {
-			if (other.nationality != null)
-				return false;
-		} else if (!nationality.equals(other.nationality))
 			return false;
 		if (placeOfBirth == null) {
 			if (other.placeOfBirth != null)
@@ -172,21 +182,6 @@ public class SportPlayer extends PersistentObject {
 	 */
 	public void setAge(int age) {
 		this.age = age;
-	}
-
-	/**
-	 * @return the nationality
-	 */
-	public Collection<String> getNationality() {
-		return nationality;
-	}
-
-	/**
-	 * @param nationality
-	 *            the nationality to set
-	 */
-	public void setNationality(Collection<String> nationality) {
-		this.nationality = nationality;
 	}
 
 	/**

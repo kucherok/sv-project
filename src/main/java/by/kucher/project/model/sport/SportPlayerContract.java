@@ -53,26 +53,10 @@ public class SportPlayerContract implements Serializable {
 	}
 
 	/**
-	 * @param id
-	 *            the id to set
-	 */
-	public void setId(Long id) {
-		this.id = id;
-	}
-
-	/**
 	 * @return the version
 	 */
 	public int getVersion() {
 		return version;
-	}
-
-	/**
-	 * @param version
-	 *            the version to set
-	 */
-	public void setVersion(int version) {
-		this.version = version;
 	}
 
 	/**
